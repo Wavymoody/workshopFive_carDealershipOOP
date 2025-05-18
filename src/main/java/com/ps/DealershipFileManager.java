@@ -8,9 +8,9 @@ public class DealershipFileManager {
         try {
             BufferedReader bufferedReader = new BufferedReader(new FileReader("inventory.csv"));
 
-            String input = bufferedReader.readLine(); //reads first line of the file
+            String input = bufferedReader.readLine();
 
-            String[] dealershipDetails = input.split("\\|"); //splits dealership  data by |
+            String[] dealershipDetails = input.split("\\|");
             String name = dealershipDetails[0];
             String address = dealershipDetails[1];
             String phone = dealershipDetails[2];
@@ -19,7 +19,7 @@ public class DealershipFileManager {
 
             //handle all vehicles
             while ((input = bufferedReader.readLine()) != null) {
-                String[] vehicleDetails = input.split("\\|"); // splits actual data by |
+                String[] vehicleDetails = input.split("\\|");
 
                 int vin = Integer.parseInt(vehicleDetails[0]);
                 int year = Integer.parseInt(vehicleDetails[1]);
